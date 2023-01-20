@@ -6,7 +6,7 @@ import shapefile as shp
 from pyproj import Proj, transform
 
 # Loading Model
-os.chdir('A:\Marco\Modelo_Marinha\Simulações\Sim#5 OLDDELFT(1)\DFM_OUTPUT_mare') #Entering the output model directory
+os.chdir('Directory_Model') #Entering the output model directory
 ds= nc.Dataset('mare_map.nc') #Loading my netCDF historical files
 #print(ds.variables.keys()) #Prints out my netcdf variable names
 #w = ds.variables['waterlevel'] [:, 0] #getting my waterlevel variable in my his, getting the first column
@@ -23,7 +23,7 @@ outProj = Proj(init='epsg:4326')
 x2,y2 = transform(inProj,outProj,lat,lon)
 
 # Plotting
-sf = shp.Reader("C:\\Users\\lapma\\Downloads\\shapemarinha (3)\\marinha_line.shp")
+sf = shp.Reader("marinha_line.shp")
 plt.figure()
 plt.tricontourf(x2, y2, velx+vely)
 plt.set_cmap('Greens')
