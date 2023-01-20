@@ -10,7 +10,7 @@ from ttide.t_tide import t_tide
 from sklearn.metrics import mean_squared_error
 
 # Loading Model
-os.chdir('A:\Marco\Modelo_Marinha\Simulações\Sim#4 OLDDELFT(1)\DFM_OUTPUT_mare') #Entering the output model directory
+os.chdir('Directory_Modelhis') #Entering the output model directory
 ds= nc.Dataset('mare_his.nc') #Loading my netCDF historical files
 #print(ds.variables.keys()) #Prints out my netcdf variable names
 w = ds.variables['waterlevel'] [2879:-1, 0] #getting my waterlevel variable in my his, getting the first column
@@ -21,7 +21,7 @@ dtm = datetime.timedelta(minutes=5)
 tmodel = np.arange(ti,tf,dtm)
 
 # Loading my Real Data
-os.chdir('A:\Marco\Modelo_Marinha\Tratamento\Dados Reais')
+os.chdir('Directory_RealData')
 
 df = pd.read_csv('Nivel_Tratado.txt', header=None)#Loading real data
 
