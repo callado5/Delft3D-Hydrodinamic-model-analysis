@@ -9,3 +9,6 @@ Here are some plot examples extrated from the output historical files
 
 Linear regression between the model data and the observed data
 ![image](https://user-images.githubusercontent.com/47508053/216104343-42a58df0-b956-4556-bc90-bb1f3f317ab6.png)
+## Load Ugrid substances
+Open Ugrids Water Quality Output: It loads the substances in water quality and plot over the ugrid model without using the quickplot function of open earth tools
+![image](https://github.com/callado5/Delft3D-Hydrodinamic-model-analysis/assets/47508053/9153f71b-62a2-4fdf-b1af-6c52b6a45c14)
