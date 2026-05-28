@@ -16,8 +16,8 @@ from datetime import datetime
 # Opening Kml file                                                         # 
 #==========================================================================#
 
-dir = 'C:\\Users\\mavca\\Downloads\\' #Your file directory
-file_name = "Sao_Caetano" #Put here your file name without its extension
+dir = 'C:\\Users\\YOURDIR\\' #Your file directory
+file_name = "YOURFILENAME" #Put here your file name without its extension
 epsg = 32622 #insert the epsg code for the UTM file
 
 gdf = gpd.read_file(dir+file_name+".kml", driver='KML') #Reading your .kml file
